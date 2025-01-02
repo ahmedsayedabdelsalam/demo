@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  appliaction:
+    name: demo
+
+  datasource:
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:3306/${DATABASE_NAME}?createDatabaseIfNotExist=true
+    username: ${DATABASE_USER}
+    passord: ${DATABASE_PASSWORD}
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
