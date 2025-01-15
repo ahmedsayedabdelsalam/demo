@@ -9,6 +9,9 @@ data class UserEntity(
   @Column(nullable = false)
   val name: String,
 
+  @Column(nullable = false)
+  val email: String,
+
   @Enumerated(EnumType.STRING)
   val status: UserStatusEnum = UserStatusEnum.ACTIVE,
 ) : BaseEntity()
